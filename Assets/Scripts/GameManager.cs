@@ -12,14 +12,9 @@ public class GameManager : MonoBehaviour
         {
             if (_instance == null)
             {
-                GameObject prefab = Resources.Load<GameObject>("Prefabs/GameManager");
-                if (prefab != null)
-                {
-                    GameObject obj = Instantiate(prefab);
-                    _instance = obj.GetComponent<GameManager>();
-                    _instance.Initialize();
-                }
-                else Debug.LogError("GameManager Not Found");
+                GameObject obj = new GameObject("GameManager");
+                _instance = obj.AddComponent<GameManager>();
+                _instance.Initialize();
             }
             return _instance;
         }

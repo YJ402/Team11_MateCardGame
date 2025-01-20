@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Card : MonoBehaviour
 {
-	int num = 1;
-    int Jsw = 12;
-	
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +13,6 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Camera.main.ScreenPointToRay(transform.position);
     }
 }
