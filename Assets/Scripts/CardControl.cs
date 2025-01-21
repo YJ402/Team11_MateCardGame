@@ -31,9 +31,8 @@ public class CardControl : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero, Mathf.Infinity);
             if (hit)
             {
-                if(hit.collider.tag == "Card")
+                if(hit.collider.TryGetComponent(out Card card))
                 {
-                    Card card = hit.collider.GetComponent<Card>();
                     card.Flip();
                     SelectCard(card);
                 }
