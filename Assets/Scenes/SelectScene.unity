@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 164988010}
   - component: {fileID: 164988009}
   - component: {fileID: 164988008}
+  - component: {fileID: 164988011}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -308,9 +309,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 631758883}
-        m_TargetAssemblyTypeName: SceneMove, Assembly-CSharp
-        m_MethodName: goTitle
+      - m_Target: {fileID: 164988011}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -358,6 +359,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164988006}
   m_CullTransparentMesh: 1
+--- !u!114 &164988011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164988006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4cceffbb294715488af818d05994ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toScene: TitleScene
+  stage: 0
 --- !u!1 &182268484
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +558,7 @@ GameObject:
   - component: {fileID: 312580841}
   - component: {fileID: 312580840}
   - component: {fileID: 312580839}
+  - component: {fileID: 312580842}
   m_Layer: 5
   m_Name: Stage1
   m_TagString: Untagged
@@ -633,6 +649,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &312580842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312580837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4cceffbb294715488af818d05994ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toScene: 
+  stage: 0
 --- !u!1 &345760626
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,6 +777,7 @@ GameObject:
   - component: {fileID: 496643592}
   - component: {fileID: 496643591}
   - component: {fileID: 496643590}
+  - component: {fileID: 496643593}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -818,10 +849,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 631758883}
-        m_TargetAssemblyTypeName: SceneMove, Assembly-CSharp
-        m_MethodName: goStage
-        m_Mode: 3
+      - m_Target: {fileID: 496643593}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -868,6 +899,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496643588}
   m_CullTransparentMesh: 1
+--- !u!114 &496643593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496643588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4cceffbb294715488af818d05994ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toScene: MainScene
+  stage: 1
 --- !u!1 &631758882
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +976,7 @@ GameObject:
   - component: {fileID: 651511906}
   - component: {fileID: 651511905}
   - component: {fileID: 651511904}
+  - component: {fileID: 651511907}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -1002,9 +1048,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 631758883}
+      - m_Target: {fileID: 651511902}
         m_TargetAssemblyTypeName: SceneMove, Assembly-CSharp
-        m_MethodName: goStage
+        m_MethodName: 
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1052,6 +1098,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651511902}
   m_CullTransparentMesh: 1
+--- !u!114 &651511907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651511902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4cceffbb294715488af818d05994ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toScene: MainScene
+  stage: 5
 --- !u!1 &691849955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,6 +1124,7 @@ GameObject:
   - component: {fileID: 691849959}
   - component: {fileID: 691849958}
   - component: {fileID: 691849957}
+  - component: {fileID: 691849960}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -1135,9 +1196,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 631758883}
+      - m_Target: {fileID: 691849955}
         m_TargetAssemblyTypeName: SceneMove, Assembly-CSharp
-        m_MethodName: goStage
+        m_MethodName: 
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1185,6 +1246,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691849955}
   m_CullTransparentMesh: 1
+--- !u!114 &691849960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691849955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4cceffbb294715488af818d05994ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toScene: MainScene
+  stage: 4
 --- !u!1 &805272612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,6 +2041,7 @@ GameObject:
   - component: {fileID: 1542101957}
   - component: {fileID: 1542101956}
   - component: {fileID: 1542101955}
+  - component: {fileID: 1542101958}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -2037,10 +2113,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 631758883}
-        m_TargetAssemblyTypeName: SceneMove, Assembly-CSharp
-        m_MethodName: goStage
-        m_Mode: 3
+      - m_Target: {fileID: 1542101958}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2087,6 +2163,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542101953}
   m_CullTransparentMesh: 1
+--- !u!114 &1542101958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542101953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4cceffbb294715488af818d05994ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toScene: MainScene
+  stage: 2
 --- !u!1 &1591584414
 GameObject:
   m_ObjectHideFlags: 0
@@ -2178,6 +2268,7 @@ GameObject:
   - component: {fileID: 1616632098}
   - component: {fileID: 1616632097}
   - component: {fileID: 1616632096}
+  - component: {fileID: 1616632099}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -2249,10 +2340,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 631758883}
-        m_TargetAssemblyTypeName: SceneMove, Assembly-CSharp
-        m_MethodName: goStage
-        m_Mode: 3
+      - m_Target: {fileID: 1616632099}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2299,6 +2390,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616632094}
   m_CullTransparentMesh: 1
+--- !u!114 &1616632099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616632094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4cceffbb294715488af818d05994ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toScene: MainScene
+  stage: 3
 --- !u!1 &1699162763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2505,6 +2610,7 @@ GameObject:
   - component: {fileID: 1795341977}
   - component: {fileID: 1795341976}
   - component: {fileID: 1795341975}
+  - component: {fileID: 1795341978}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -2576,9 +2682,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 631758883}
+      - m_Target: {fileID: 1795341973}
         m_TargetAssemblyTypeName: SceneMove, Assembly-CSharp
-        m_MethodName: goStage
+        m_MethodName: 
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2626,6 +2732,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795341973}
   m_CullTransparentMesh: 1
+--- !u!114 &1795341978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795341973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4cceffbb294715488af818d05994ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toScene: MainScene
+  stage: 6
 --- !u!1 &2005983884
 GameObject:
   m_ObjectHideFlags: 0
