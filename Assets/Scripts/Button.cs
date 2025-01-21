@@ -28,6 +28,7 @@ public class Button : MonoBehaviour
         { 
             Instance.stageNum = stage; // 인스펙터에서 stage 값 입력하면 그 값이 GameManager의 stageNum에 입력됨. stageNum을 활용해서 메인씬, 승리씬에 활용하면 될듯
         }
+        Debug.Log(Instance.stageNum);
             
         Instance.LoadScene(toScene);
     }
