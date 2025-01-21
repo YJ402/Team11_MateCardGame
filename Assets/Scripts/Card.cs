@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public SpriteRenderer sprite;
+    public TextMeshPro index;
+    public int CardIndex { get; private set; }
+
+    public void Initialize(int cardIndex)
+    {
+        CardIndex = cardIndex;
+        index.text = cardIndex.ToString();
+    }
+
+    public void Awake()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void WaitForSecondToFlip(float time)
     {
-        Camera.main.ScreenPointToRay(transform.position);
+        Invoke("Flip", time);
+    }
+
+    public void Flip()
+    {
+        transform.Rotate(0, 180, 0);
     }
 }
