@@ -46,13 +46,11 @@ public class CardControl : MonoBehaviour
         {
             return;
         }
-        if (selectCards.Count == 0)
+
+        var collider = card.GetComponent<Collider2D>();
+        if (collider != null)
         {
-            var collider = card.GetComponent<Collider2D>();
-            if (collider != null)
-            {
-                collider.enabled = false; // 첫 번째 카드 더블 클릭 방지
-            }
+            collider.enabled = false; // 첫 번째 카드 더블 클릭 방지
         }
 
         selectCards.Add(card);
