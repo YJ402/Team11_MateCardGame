@@ -509,6 +509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toScene: SelectScene
+  stage: 0
 --- !u!1 &883618760
 GameObject:
   m_ObjectHideFlags: 0
