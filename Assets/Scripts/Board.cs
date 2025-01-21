@@ -12,6 +12,8 @@ public class Board : MonoBehaviour
 
     public float margin = 1.1f;
 
+    public int cardCount = 0;
+
     private GameManager gameManager;
     private CardControl cardControl;
 
@@ -36,8 +38,9 @@ public class Board : MonoBehaviour
             float y = (i / boardSize) * margin - 1.7f;
 
             Card card = Instantiate(cardPrefab, new Vector3(x, y, 0), Quaternion.identity);
-            card.Initialize(arr[i]); // 좌측 하단부터 차례대로 생성되는 카드에 배열에 저장된 숫자를 부여한다.
+            card.Initialize(arr[i], gameManager.stageNum); // 좌측 하단부터 차례대로 생성되는 카드에 배열에 저장된 숫자를 부여한다.
         }
+        cardCount = arr.Length;
     }
 
     private void Update()
@@ -50,6 +53,15 @@ public class Board : MonoBehaviour
         if (cards[0].CardIndex == cards[1].CardIndex)
         {
             Debug.Log("Succes Card Matching.");
+
+            cards[0].SetMatched();
+            cards[1].SetMatched();
+            cardCount -= 2;
+
+            if (cardCount == 0) // 게임 승리 시
+            {
+                gameManager.LoadScene("SuccessScene");
+            }
         }
         else
         {

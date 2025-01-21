@@ -43,13 +43,34 @@ public class CardControl : MonoBehaviour
 
     public void SelectCard(Card card)
     {
-        if(selectCards.Count == 2)
+        if (card.IsMatched) // 이미 매칭된 카드는 클릭 불가
         {
-            selectCards.Clear();
-            selectCards.Add(card);
+            return;
         }
-        else selectCards.Add(card);
+        if (selectCards.Count == 0)
+        {
+            var collider = card.GetComponent<Collider2D>();
+            if (collider != null)
+            {
+                collider.enabled = false; // 첫 번째 카드 더블 클릭 방지
+            }
+        }
 
-        if (selectCards.Count == 2) matcingCard?.Invoke(selectCards.ToArray());
+        selectCards.Add(card);
+
+        if (selectCards.Count == maxSelection)
+        {
+            matcingCard?.Invoke(selectCards.ToArray());
+
+            // 매칭 판정 후 첫 번째 카드 다시 활성화
+            var firstCardCollider = selectCards[0].GetComponent<Collider2D>();
+            if (firstCardCollider != null)
+            {
+                firstCardCollider.enabled = true; // 첫 번째 카드 다시 활성화
+            }
+
+            // 선택 카드 초기화
+            selectCards.Clear();
+        }
     }
 }

@@ -1,32 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class Card : MonoBehaviour
 {
     public SpriteRenderer backImage;
-    public TextMeshPro index;
     public int CardIndex { get; private set; }
+    public int Stage { get; private set; }
+    public bool IsMatched { get; private set; }
 
-    public void Initialize(int cardIndex)
+    public void Initialize(int cardIndex, int stageNum)
     {
+        Stage = stageNum;
         CardIndex = cardIndex;
-        backImage.sprite = Resources.Load<Sprite>($"img0_{CardIndex}");
+        backImage.sprite = Resources.Load<Sprite>($"Stage{Stage}/img{CardIndex}");
+    }
+    
+    public void SetMatched()
+    {
+        IsMatched = true;
     }
 
-    public void Awake()
-    {
-        
-    }
 
     public void WaitForSecondToFlip(float time)
     {
-        Invoke("Flip", time);
+        if (!IsMatched)
+        {
+            Invoke("Flip", time);
+        }
     }
 
     public void Flip()
     {
-        transform.Rotate(0, 180, 0);
+        if (!IsMatched)
+        {
+            transform.Rotate(0, 180, 0);
+        }
     }
 }

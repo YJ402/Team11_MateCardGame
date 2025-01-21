@@ -294,6 +294,7 @@ MonoBehaviour:
   boardSize: 4
   cardPrefab: {fileID: 1259170998673566482, guid: 1f9f6ca62797ce745922637e78bcde19, type: 3}
   margin: 1.1
+  cardCount: 0
 --- !u!4 &771058634
 Transform:
   m_ObjectHideFlags: 0
