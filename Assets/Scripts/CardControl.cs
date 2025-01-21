@@ -50,7 +50,7 @@ public class CardControl : MonoBehaviour
         var collider = card.GetComponent<Collider2D>();
         if (collider != null)
         {
-            collider.enabled = false; // 첫 번째 카드 더블 클릭 방지
+            collider.enabled = false; // 카드 더블 클릭 방지
         }
 
         selectCards.Add(card);
@@ -59,11 +59,15 @@ public class CardControl : MonoBehaviour
         {
             matcingCard?.Invoke(selectCards.ToArray());
 
-            // 매칭 판정 후 첫 번째 카드 다시 활성화
             var firstCardCollider = selectCards[0].GetComponent<Collider2D>();
             if (firstCardCollider != null)
             {
                 firstCardCollider.enabled = true; // 첫 번째 카드 다시 활성화
+            }
+            var secondCardCollider = selectCards[1].GetComponent<Collider2D>();
+            if (secondCardCollider != null)
+            {
+                secondCardCollider.enabled = true; // 두 번째 카드 다시 활성화
             }
 
             // 선택 카드 초기화
