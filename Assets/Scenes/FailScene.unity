@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 309863919}
   - component: {fileID: 309863918}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Stage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -541,7 +541,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 309863919}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127846712}
+        m_TargetAssemblyTypeName: SceneMove, Assembly-CSharp
+        m_MethodName: goSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &309863919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,6 +818,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599112910}
   m_CullTransparentMesh: 1
+--- !u!1 &764539973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 764539975}
+  - component: {fileID: 764539974}
+  m_Layer: 0
+  m_Name: StageManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &764539974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764539973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa8ac8fc0a0e17a46a86667014be25e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &764539975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764539973}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.7303314, y: -0.3651885, z: -0.88319844}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &920370332
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,7 +875,7 @@ GameObject:
   - component: {fileID: 920370335}
   - component: {fileID: 920370334}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Retry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -888,7 +944,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 920370335}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127846712}
+        m_TargetAssemblyTypeName: SceneMove, Assembly-CSharp
+        m_MethodName: goRetry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &920370335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1040,6 +1108,7 @@ GameObject:
   - component: {fileID: 2127846709}
   - component: {fileID: 2127846711}
   - component: {fileID: 2127846710}
+  - component: {fileID: 2127846712}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1107,6 +1176,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127846708}
   m_CullTransparentMesh: 1
+--- !u!114 &2127846712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127846708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a436bb9c2d45544a251c7ac615de35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1114,3 +1195,4 @@ SceneRoots:
   - {fileID: 423568454}
   - {fileID: 1138270121}
   - {fileID: 135934398}
+  - {fileID: 764539975}

@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 493747799}
   - component: {fileID: 493747798}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Stage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -489,7 +489,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 493747799}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1672995381}
+        m_TargetAssemblyTypeName: SceneMove, Assembly-CSharp
+        m_MethodName: goSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &493747799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,7 +929,7 @@ GameObject:
   - component: {fileID: 1021250764}
   - component: {fileID: 1021250763}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Retry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -986,7 +998,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1021250764}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1672995381}
+        m_TargetAssemblyTypeName: SceneMove, Assembly-CSharp
+        m_MethodName: goRetry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1021250764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1105,7 +1129,7 @@ GameObject:
   - component: {fileID: 1325860328}
   - component: {fileID: 1325860327}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Stage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1447,6 +1471,7 @@ GameObject:
   - component: {fileID: 1672995378}
   - component: {fileID: 1672995380}
   - component: {fileID: 1672995379}
+  - component: {fileID: 1672995381}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1524,6 +1549,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672995377}
   m_CullTransparentMesh: 1
+--- !u!114 &1672995381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672995377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a436bb9c2d45544a251c7ac615de35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1754320823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,6 +1663,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1905605467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1905605469}
+  - component: {fileID: 1905605468}
+  m_Layer: 0
+  m_Name: StageManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1905605468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905605467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa8ac8fc0a0e17a46a86667014be25e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1905605469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905605467}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.7303314, y: -0.3651885, z: -0.88319844}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1910227115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1933,3 +2014,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1754320827}
   - {fileID: 1133568874}
+  - {fileID: 1905605469}
