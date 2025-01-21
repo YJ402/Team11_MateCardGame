@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Board : MonoBehaviour
 {
@@ -11,14 +13,19 @@ public class Board : MonoBehaviour
     public Card cardPrefab;
 
     public float margin = 1.1f;
+    public Text timeTxt;
 
     public int cardCount = 0;
+    float time = 0.0f;
+
 
     private GameManager gameManager;
     private CardControl cardControl;
 
     private void Start()
     {
+        Time.timeScale = 1.0f;
+
         gameManager = GameManager.Instance;
         cardControl = GetComponentInChildren<CardControl>();
 
@@ -45,7 +52,13 @@ public class Board : MonoBehaviour
 
     private void Update()
     {
+        time += Time.deltaTime;
+        timeTxt.text = time.ToString("N2");
 
+        if (time >= 30.0f) // 게임 패배 시
+        {
+            gameManager.LoadScene("FailScene");
+        }
     }
 
     private void CheckMatching(Card[] cards)
