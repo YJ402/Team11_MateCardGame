@@ -1,9 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using Unity.VisualScripting;
+using UnityEditor.Build.Player;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
     private static GameManager _instance;
 
     public static GameManager Instance
@@ -12,17 +19,12 @@ public class GameManager : MonoBehaviour
         {
             if (_instance == null)
             {
-                GameObject obj = new GameObject("GameManager");
+                GameObject obj = new GameObject(nameof(GameManager));
                 _instance = obj.AddComponent<GameManager>();
-                _instance.Initialize();
+                DontDestroyOnLoad(obj);
             }
             return _instance;
         }
-    }
-
-    public void Initialize()
-    {
-
     }
 
     private void Awake()
@@ -34,9 +36,36 @@ public class GameManager : MonoBehaviour
         }
 
         _instance = this;
-
-        Initialize();
-
         DontDestroyOnLoad(gameObject);
     }
+
+
+    public int stage = 0; // 스테이지 선택 값을 저장. 에셋이미지 불러올때 활용
+
+    public float bestScore = 0;
+    public float currentScore = 0;
+    PlayerPrefs playerPrefs;
+
+    public float[] scores = new float[5];
+
+
+
+    public void LoadScene(string SceneName)
+    {
+        SceneManager.LoadScene(SceneName);
+    }
+
+    /*
+    public void Score(string restTime)
+    {
+        currentScore = float.Parse(restTime);
+        if(currentScore > score[4])
+        {
+            score[4] = currentScore;
+            scores = scores.OrderBy(x => )
+
+        }
+
+    }
+    */
 }
