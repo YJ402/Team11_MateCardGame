@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    public SpriteRenderer sprite;
+    public SpriteRenderer backImage;
     public TextMeshPro index;
     public int CardIndex { get; private set; }
 
     public void Initialize(int cardIndex)
     {
         CardIndex = cardIndex;
-        index.text = cardIndex.ToString();
+        backImage.sprite = Resources.Load<Sprite>($"img0_{CardIndex}");
     }
 
     public void Awake()
