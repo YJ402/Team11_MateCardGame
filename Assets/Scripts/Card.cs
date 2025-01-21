@@ -18,7 +18,7 @@ public class Card : MonoBehaviour
         backImage.sprite = Resources.Load<Sprite>($"Stage{Stage}/img{CardIndex}");
     }
     
-    public void SetMatched()
+    public void SetMatched() // 그림 매치 확인
     {
         IsMatched = true;
     }
@@ -26,7 +26,7 @@ public class Card : MonoBehaviour
 
     public void WaitForSecondToFlip(float time)
     {
-        if (!IsMatched)
+        if (!IsMatched) // 이미 매칭 완료된 이미지는 뒤집히지 않는다
         {
             Invoke("Flip", time);
         }

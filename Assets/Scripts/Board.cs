@@ -67,7 +67,7 @@ public class Board : MonoBehaviour
         {
             Debug.Log("Succes Card Matching.");
 
-            cards[0].SetMatched();
+            cards[0].SetMatched(); // 매치 완료
             cards[1].SetMatched();
             cardCount -= 2;
 
