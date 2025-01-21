@@ -1,28 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
     private static GameManager _instance;
 
     public static GameManager Instance
     {
-        get
+        get 
         {
             if (_instance == null)
             {
-                GameObject obj = new GameObject("GameManager");
+                GameObject obj = new GameObject(nameof(GameManager));
                 _instance = obj.AddComponent<GameManager>();
-                _instance.Initialize();
+                DontDestroyOnLoad(obj);
             }
-            return _instance;
+            return _instance; 
         }
-    }
-
-    public void Initialize()
-    {
-
     }
 
     private void Awake()
@@ -34,9 +32,22 @@ public class GameManager : MonoBehaviour
         }
 
         _instance = this;
-
-        Initialize();
-
         DontDestroyOnLoad(gameObject);
     }
+
+
+    public int stage = 0; // 스테이지 선택 값을 저장. 에셋이미지 불러올때 활용
+
+
+    public void LoadScene(string SceneName)
+    {
+        Invoke("_LoadScene", 1);
+    }
+
+    void _LoadScene(string SceneName)
+    {
+        SceneManager.LoadScene(SceneName);
+    }
+
+
 }
