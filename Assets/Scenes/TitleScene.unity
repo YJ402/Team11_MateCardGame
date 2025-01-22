@@ -123,7 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &23773006
+=======
+--- !u!1 &38796325
+>>>>>>> main
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,16 +135,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 23773007}
   - component: {fileID: 23773009}
   - component: {fileID: 23773008}
   m_Layer: 5
   m_Name: Card1
+=======
+  - component: {fileID: 38796326}
+  - component: {fileID: 38796328}
+  - component: {fileID: 38796327}
+  m_Layer: 5
+  m_Name: BackGround
+>>>>>>> main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!224 &23773007
 RectTransform:
   m_ObjectHideFlags: 0
@@ -216,6 +229,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+=======
+>>>>>>> main
 --- !u!224 &38796326
 RectTransform:
   m_ObjectHideFlags: 0
@@ -272,6 +287,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38796325}
+<<<<<<< HEAD
   m_CullTransparentMesh: 1
 --- !u!1 &61468469
 GameObject:
@@ -768,6 +784,8 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258530215}
+=======
+>>>>>>> main
   m_CullTransparentMesh: 1
 --- !u!1 &304283345
 GameObject:
@@ -1304,7 +1322,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &573707368
+=======
+--- !u!1 &883618760
+>>>>>>> main
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1312,6 +1334,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 573707369}
   - component: {fileID: 573707371}
   - component: {fileID: 573707370}
@@ -1390,6 +1413,11 @@ GameObject:
   - component: {fileID: 581849673}
   - component: {fileID: 581849675}
   m_Layer: 5
+=======
+  - component: {fileID: 581849673}
+  - component: {fileID: 581849675}
+  m_Layer: 5
+>>>>>>> main
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1467,7 +1495,11 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: 0, y: 125}
+=======
+  m_AnchoredPosition: {x: 0, y: 365}
+>>>>>>> main
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &581849675
@@ -2377,6 +2409,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262816371}
+<<<<<<< HEAD
   m_CullTransparentMesh: 1
 --- !u!1 &1292685541
 GameObject:
@@ -3218,6 +3251,8 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789877950}
+=======
+>>>>>>> main
   m_CullTransparentMesh: 1
 --- !u!1 &1806101377
 GameObject:
@@ -3317,9 +3352,12 @@ RectTransform:
   m_Children:
   - {fileID: 38796326}
   - {fileID: 581849673}
+<<<<<<< HEAD
   - {fileID: 160929427}
   - {fileID: 1419047034}
   - {fileID: 507429699}
+=======
+>>>>>>> main
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3327,6 +3365,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+<<<<<<< HEAD
 --- !u!95 &1806101382
 Animator:
   serializedVersion: 5
@@ -3814,6 +3853,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009612431}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> main
 --- !u!1 &2139410942
 GameObject:
   m_ObjectHideFlags: 0
