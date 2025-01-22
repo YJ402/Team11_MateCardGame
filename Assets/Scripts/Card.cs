@@ -21,7 +21,7 @@ public class Card : MonoBehaviour
     public void SetMatched() // 그림 매치 확인
     {
         IsMatched = true;
-    }
+     }
 
 
     public void WaitForSecondToFlip(float time)

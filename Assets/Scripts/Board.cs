@@ -55,7 +55,7 @@ public class Board : MonoBehaviour
         time += Time.deltaTime;
         timeTxt.text = time.ToString("N2");
 
-        if (time >= 30.0f) // 게임 패배 시
+        if (time >= 130.0f) // 게임 패배 시
         {
             gameManager.LoadScene("FailScene");
         }
@@ -67,8 +67,16 @@ public class Board : MonoBehaviour
         {
             Debug.Log("Succes Card Matching.");
 
+<<<<<<< HEAD
             cards[0].SetMatched(); // 매치 완료
             cards[1].SetMatched();
+=======
+            // 랜덤한 숫자 부여
+            int randomEffect = Random.Range(1, 4);
+
+            cards[0].SetMatched(randomEffect);
+            cards[1].SetMatched(randomEffect);
+>>>>>>> JSU
             cardCount -= 2;
 
             if (cardCount == 0) // 게임 승리 시
