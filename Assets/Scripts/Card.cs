@@ -1,6 +1,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.SceneManagement;
@@ -52,6 +53,23 @@ public class Card : MonoBehaviour
             default:
                 Debug.Log("Card::SetMatched - Àß¸øµÈ ·£´ý°ªÀÌ »ðÀÔµÊ");
                 break;
+        }
+
+        StartCoroutine(Shining(2f));
+    }
+
+    private IEnumerator Shining(float duration)
+    {
+        float shineLocation = 0;
+
+        while (true)
+        {
+            shineLocation += 1.0f / duration * Time.deltaTime;
+            shineLocation %= 1.0f;
+
+            backImage.material.SetFloat("_ShineLocation", shineLocation);
+
+            yield return null;
         }
     }
 
