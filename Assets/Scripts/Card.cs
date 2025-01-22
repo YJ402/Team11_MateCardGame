@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Card : MonoBehaviour
 {
@@ -16,20 +18,22 @@ public class Card : MonoBehaviour
 
     public bool bDestroyStart { get; set; } = false;
 
-
-    
-
+    private Shadow shadow;
 
     public void Initialize(int cardIndex, int stageNum)
     {
         Stage = stageNum;
         CardIndex = cardIndex;
         backImage.sprite = Resources.Load<Sprite>($"Stage{Stage}/img{CardIndex}");
+
+        shadow = GetComponent<Shadow>();
     }
-    
+
+
     public void SetMatched()
     {
         IsMatched = true;
+        shadow.Deactivation();
 
         Debug.Log(EffectNumber);
         switch (EffectNumber)

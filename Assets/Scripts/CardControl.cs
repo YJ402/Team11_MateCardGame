@@ -33,8 +33,11 @@ public class CardControl : MonoBehaviour
             {
                 if(hit.collider.TryGetComponent(out Card card))
                 {
+
+                    card.GetComponent<Shadow>().Deactivation();
                     card.Flip();
                     SelectCard(card);
+
                 }
             }
         }
@@ -69,6 +72,11 @@ public class CardControl : MonoBehaviour
             {
                 secondCardCollider.enabled = true; // 두 번째 카드 다시 활성화
             }
+
+            if (!selectCards[0].IsMatched)
+                selectCards[0].GetComponent<Shadow>().Activation();
+            if (!selectCards[1].IsMatched)
+                selectCards[1].GetComponent<Shadow>().Activation();
 
             // 선택 카드 초기화
             selectCards.Clear();
