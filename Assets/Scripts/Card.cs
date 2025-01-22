@@ -67,10 +67,6 @@ public class Card : MonoBehaviour
             transform.Rotate(0, 180, 0);
         }
     }
-<<<<<<< Updated upstream
-}
-=======
-
     private IEnumerator Effect1()
     {
         // 카드를 1.0초 동안 Y축으로 180도 회전
@@ -150,4 +146,3 @@ public class Card : MonoBehaviour
         transform.localScale = targetScale;
     }
 }
->>>>>>> Stashed changes
