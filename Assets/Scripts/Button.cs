@@ -28,8 +28,7 @@ public class Button : MonoBehaviour
         { 
             if(stage == -1)
             {
-                stage = Random.Range(1, 7);
-                Instance.stageNum = stage;
+                Instance.stageNum = Random.Range(1, 7);
             }
             else Instance.stageNum = stage; // 인스펙터에서 stage 값 입력하면 그 값이 GameManager의 stageNum에 입력됨. stageNum을 활용해서 메인씬, 승리씬에 활용하면 될듯
         }
