@@ -67,14 +67,11 @@ public class Board : MonoBehaviour
         {
             Debug.Log("Succes Card Matching.");
 
-            cards[0].SetMatched(); // 매치 완료
             // 랜덤한 숫자 부여
             int randomEffect = Random.Range(1, 4);
-            cards[0].EffectNumber = randomEffect;
-            cards[1].EffectNumber = randomEffect;
 
-            cards[0].SetMatched();
-            cards[1].SetMatched();
+            cards[0].SetMatched(randomEffect);
+            cards[1].SetMatched(randomEffect);
             cardCount -= 2;
 
             if (cardCount == 0) // 게임 승리 시

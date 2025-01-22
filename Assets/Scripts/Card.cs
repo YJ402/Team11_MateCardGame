@@ -13,7 +13,6 @@ public class Card : MonoBehaviour
     public int Stage { get; private set; }
     public bool IsMatched { get; private set; }
 
-    public int EffectNumber { get; set; }
     private float remainTime { get; set; }
 
     public bool bDestroyStart { get; set; } = false;
@@ -30,7 +29,7 @@ public class Card : MonoBehaviour
     }
 
 
-    public void SetMatched()
+    public void SetMatched(int EffectNumber)
     {
         IsMatched = true;
         shadow.Deactivation();
@@ -39,11 +38,9 @@ public class Card : MonoBehaviour
         switch (EffectNumber)
         {
             case 1:
-                // 1초 동안 y축으로 180도 돌림
                 StartCoroutine(Effect1());
                 break;
             case 2:
-                // 1초동안 y축으로 180도 돌리고, 
                 StartCoroutine(Effect2());
                 break;
             case 3:
