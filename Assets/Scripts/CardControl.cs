@@ -33,11 +33,9 @@ public class CardControl : MonoBehaviour
             {
                 if(hit.collider.TryGetComponent(out Card card))
                 {
-
                     card.GetComponent<Shadow>().Deactivation();
                     card.Flip();
                     SelectCard(card);
-
                 }
             }
         }

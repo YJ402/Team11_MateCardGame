@@ -36,6 +36,8 @@ public class Card : MonoBehaviour
         shadow.Deactivation();
 
         Debug.Log(EffectNumber);
+
+        transform.rotation = Quaternion.identity;
         switch (EffectNumber)
         {
             case 1:
@@ -56,10 +58,7 @@ public class Card : MonoBehaviour
 
     public void WaitForSecondToFlip(float time)
     {
-        if (!IsMatched)
-        {
-            Invoke("Flip", time);
-        }
+        Invoke("Flip", time);
     }
 
     public void Flip()
@@ -77,7 +76,7 @@ public class Card : MonoBehaviour
     private IEnumerator Effect2()
     {
         // 1. 카드를 0.8초 동안 Y축으로 1980도 회전
-        yield return StartCoroutine(RotateAxisYOverTime(1800f, 0.8f));
+        yield return StartCoroutine(RotateAxisYOverTime(1980f, 0.8f));
 
         // 2. 카드를 0.2초 동안 1.8배 확대 후 다시 축소하는 것을 1번 반복
         Vector3 targetScale = transform.localScale * 1.8f;
@@ -86,11 +85,11 @@ public class Card : MonoBehaviour
     private IEnumerator Effect3()
     {
         // 1. 카드를 0.6초 동안 Y축으로 540도 회전
-        yield return StartCoroutine(RotateAxisYOverTime(720f, 0.3f));
+        yield return StartCoroutine(RotateAxisYOverTime(540f, 0.3f));
 
-        // 2. 카드를 0.4초 동안 1.8배 확대 후 다시 축소하는 것을 3번 반복
+        // 2. 카드를 0.4초 동안 1.8배 확대 후 다시 축소하는 것을 2번 반복
         Vector3 targetScale = transform.localScale * 1.8f;
-        yield return StartCoroutine(ScalingUpDownNCounts(targetScale, 0.4f, 3));
+        yield return StartCoroutine(ScalingUpDownNCounts(targetScale, 0.4f, 2));
     }
 
 
