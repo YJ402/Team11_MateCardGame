@@ -7,7 +7,7 @@ public class Button : MonoBehaviour
 {
     private GameManager Instance;
 
-    public string toScene; // ÀÎ½ºÆåÅÍ·Î ¾À ÀÌ¸§ ÀÔ·ÂÇÏ¸é ±× ¾ÀÀ¸·Î ÀÌµ¿.
+    public string toScene; // ï¿½Î½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½.
 
     public int stage = 0;
 
