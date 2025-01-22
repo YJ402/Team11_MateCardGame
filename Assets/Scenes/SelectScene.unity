@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toScene: MainScene
-  stage: 3
+  stage: 4
   delay: 0
 --- !u!95 &5861945
 Animator:
@@ -927,7 +927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toScene: MainScene
-  stage: 1
+  stage: 2
   delay: 0
 --- !u!95 &400519827
 Animator:
@@ -1445,7 +1445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toScene: MainScene
-  stage: 0
+  stage: 1
   delay: 0
 --- !u!95 &829328509
 Animator:
@@ -1946,7 +1946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toScene: MainScene
-  stage: 2
+  stage: 3
   delay: 0
 --- !u!95 &1209965184
 Animator:
@@ -2256,7 +2256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toScene: MainScene
-  stage: 5
+  stage: 6
   delay: 0
 --- !u!95 &1289646634
 Animator:
@@ -3013,7 +3013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toScene: MainScene
-  stage: 4
+  stage: 5
   delay: 0
 --- !u!95 &1916838241
 Animator:
