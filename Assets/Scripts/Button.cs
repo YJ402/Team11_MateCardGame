@@ -5,11 +5,14 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    GameManager Instance;
+    private GameManager Instance;
 
-    public string toScene; // ÀÎ½ºÆåÅÍ·Î ¾À ÀÌ¸§ ÀÔ·ÂÇÏ¸é ±× ¾ÀÀ¸·Î ÀÌµ¿.
+    public string toScene; // ï¿½Î½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½.
 
     public int stage = 0;
+
+    public float delay = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,18 +25,33 @@ public class Button : MonoBehaviour
 
     }
 
-    public void OnClick()
+    IEnumerator Delay()
     {
+        yield return new WaitForSeconds(delay);
+
+        if (stage != 0)
+        {
+            Instance.stageNum = stage; // ï¿½Î½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ stage ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ GameManagerï¿½ï¿½ stageNumï¿½ï¿½ ï¿½Ô·Âµï¿½. stageNumï¿½ï¿½ È°ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½Î¾ï¿½, ï¿½Â¸ï¿½ï¿½ï¿½ï¿½ï¿½ È°ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½Éµï¿½
         if (stage != 0) 
         { 
             if(stage == -1)
             {
                 Instance.stageNum = Random.Range(1, 7);
             }
-            else Instance.stageNum = stage; // ÀÎ½ºÆåÅÍ¿¡¼­ stage °ª ÀÔ·ÂÇÏ¸é ±× °ªÀÌ GameManagerÀÇ stageNum¿¡ ÀÔ·ÂµÊ. stageNumÀ» È°¿ëÇØ¼­ ¸ÞÀÎ¾À, ½Â¸®¾À¿¡ È°¿ëÇÏ¸é µÉµí
+            else Instance.stageNum = stage; // ï¿½Î½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ stage ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ GameManagerï¿½ï¿½ stageNumï¿½ï¿½ ï¿½Ô·Âµï¿½. stageNumï¿½ï¿½ È°ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½Î¾ï¿½, ï¿½Â¸ï¿½ï¿½ï¿½ï¿½ï¿½ È°ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½Éµï¿½
         }
         Debug.Log(Instance.stageNum);
-            
+
         Instance.LoadScene(toScene);
+    }
+
+    public void OnClick()
+    {
+        StartCoroutine(Delay());
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        GameManager.Instance.SoundManager.PlaySound(clip);
     }
 }
