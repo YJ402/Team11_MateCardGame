@@ -32,4 +32,9 @@ public class Button : MonoBehaviour
             
         Instance.LoadScene(toScene);
     }
+
+    public void PlaySound(AudioClip clip)
+    {
+        GameManager.Instance.SoundManager.PlaySound(clip);
+    }
 }

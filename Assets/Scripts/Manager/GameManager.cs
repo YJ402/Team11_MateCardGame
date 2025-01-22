@@ -9,16 +9,20 @@ public class GameManager : MonoBehaviour
 
     private static GameManager _instance;
 
-    public int stageNum = 0;
     public static GameManager Instance
     {
         get
         {
             if (_instance == null)
             {
-                GameObject obj = new GameObject(nameof(GameManager));
-                _instance = obj.AddComponent<GameManager>();
-                DontDestroyOnLoad(obj);
+                GameObject prefab = Resources.Load<GameObject>("Prefabs/GameManager");
+                if (prefab != null)
+                {
+                    GameObject obj = Instantiate(prefab);
+                    _instance = obj.GetComponent<GameManager>();
+                    _instance.Initialize();
+                }
+                else Debug.LogError("GameManager Not Found");
             }
             return _instance;
         }
@@ -35,9 +39,17 @@ public class GameManager : MonoBehaviour
         _instance = this;
         DontDestroyOnLoad(gameObject);
 
+        Initialize();
     }
 
+    public SoundManager SoundManager { get; private set; }
 
+    public int stageNum = 0;
+
+    public void Initialize()
+    {
+        SoundManager = GetComponentInChildren<SoundManager>();
+    }
 
     public void LoadScene(string name)
     {
