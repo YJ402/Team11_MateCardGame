@@ -11,6 +11,7 @@ using UnityEngine.UI;
 public class Card : MonoBehaviour
 {
     public SpriteRenderer backImage;
+    public SpriteRenderer backFrameImage; // BackFrame
     public int CardIndex { get; private set; }
     public int Stage { get; private set; }
     public bool IsMatched { get; private set; }
@@ -26,6 +27,7 @@ public class Card : MonoBehaviour
         Stage = stageNum;
         CardIndex = cardIndex;
         backImage.sprite = Resources.Load<Sprite>($"Stage{Stage}/img{CardIndex}");
+        backFrameImage.sprite = Resources.Load<Sprite>("Frame"); ; // BackFrame
 
         shadow = GetComponent<Shadow>();
     }
