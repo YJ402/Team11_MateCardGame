@@ -7,8 +7,9 @@ public class CardControl : MonoBehaviour
 {
     private List<Card> selectCards = new List<Card>();
     public int maxSelection = 2;
-
     public Action<Card[]> matcingCard;
+
+    private bool IsSelectable = true;
 
     public void Initialize(int maxSelection)
     {
@@ -24,6 +25,8 @@ public class CardControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!IsSelectable) return;
+        
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -34,8 +37,8 @@ public class CardControl : MonoBehaviour
                 if(hit.collider.TryGetComponent(out Card card))
                 {
                     card.GetComponent<Shadow>().Deactivation();
-                    card.Flip();
                     SelectCard(card);
+                    card.Flip();
                 }
             }
         }
@@ -58,6 +61,9 @@ public class CardControl : MonoBehaviour
 
         if (selectCards.Count == maxSelection)
         {
+            IsSelectable = false;
+            StartCoroutine(EnableSelectionAfterDelay(0.5f));
+
             matcingCard?.Invoke(selectCards.ToArray());
 
             var firstCardCollider = selectCards[0].GetComponent<Collider2D>();
@@ -79,5 +85,11 @@ public class CardControl : MonoBehaviour
             // 선택 카드 초기화
             selectCards.Clear();
         }
+    }
+
+    private IEnumerator EnableSelectionAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        IsSelectable = true;
     }
 }
