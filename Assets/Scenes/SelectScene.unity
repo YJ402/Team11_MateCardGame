@@ -295,7 +295,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5861944}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5861944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,8 +320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4cceffbb294715488af818d05994ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScene: 
-  stage: 0
+  toScene: MainScene
+  stage: 3
   delay: 0
 --- !u!95 &5861945
 Animator:
@@ -889,7 +901,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 400519826}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &400519826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -902,8 +926,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4cceffbb294715488af818d05994ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScene: 
-  stage: 0
+  toScene: MainScene
+  stage: 1
   delay: 0
 --- !u!95 &400519827
 Animator:
@@ -1395,7 +1419,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 829328508}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &829328508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1408,7 +1444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4cceffbb294715488af818d05994ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScene: 
+  toScene: MainScene
   stage: 0
   delay: 0
 --- !u!95 &829328509
@@ -1884,7 +1920,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1209965183}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1209965183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1897,8 +1945,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4cceffbb294715488af818d05994ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScene: 
-  stage: 0
+  toScene: MainScene
+  stage: 2
   delay: 0
 --- !u!95 &1209965184
 Animator:
@@ -1960,6 +2008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1220926973}
   - component: {fileID: 1220926976}
+  - component: {fileID: 1220926977}
   - component: {fileID: 1220926975}
   - component: {fileID: 1220926974}
   m_Layer: 5
@@ -2031,7 +2080,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1220926975}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1220926977}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1220926975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2070,6 +2131,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220926972}
   m_CullTransparentMesh: 1
+--- !u!114 &1220926977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220926972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4cceffbb294715488af818d05994ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toScene: TitleScene
+  stage: 0
+  delay: 0
 --- !u!1 &1289646630
 GameObject:
   m_ObjectHideFlags: 0
@@ -2154,7 +2230,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1289646633}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1289646633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2167,8 +2255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4cceffbb294715488af818d05994ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScene: 
-  stage: 0
+  toScene: MainScene
+  stage: 5
   delay: 0
 --- !u!95 &1289646634
 Animator:
@@ -2899,7 +2987,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1916838240}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1916838240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2912,8 +3012,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4cceffbb294715488af818d05994ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScene: 
-  stage: 0
+  toScene: MainScene
+  stage: 4
   delay: 0
 --- !u!95 &1916838241
 Animator:
