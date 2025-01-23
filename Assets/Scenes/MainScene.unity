@@ -298,6 +298,14 @@ MonoBehaviour:
   margin: 1.1
   timeTxt: {fileID: 2113478952}
   cardCount: 0
+  matchingClip: {fileID: 8300000, guid: 77a885693ff3dc94a80876f9dd61e3aa, type: 3}
+  bgmClips:
+  - {fileID: 8300000, guid: 9ca1939d0ef26d94f841c0e6ad8976af, type: 3}
+  - {fileID: 8300000, guid: 128a1fffe2e095240b80d5afdac3f44f, type: 3}
+  - {fileID: 8300000, guid: f41ce0a7d6315f94bb74504ddf70b75d, type: 3}
+  - {fileID: 8300000, guid: 5c9612ac2c357bb478e199dfe4f87fee, type: 3}
+  - {fileID: 8300000, guid: 4522b9aee52efcd408249c04d3c200bd, type: 3}
+  - {fileID: 0}
 --- !u!4 &771058634
 Transform:
   m_ObjectHideFlags: 0
@@ -326,11 +334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86865794543847a4dae8c390104e9177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Stage1: {fileID: 8300000, guid: 9ca1939d0ef26d94f841c0e6ad8976af, type: 3}
-  Stage2: {fileID: 8300000, guid: 128a1fffe2e095240b80d5afdac3f44f, type: 3}
-  Stage3: {fileID: 8300000, guid: f41ce0a7d6315f94bb74504ddf70b75d, type: 3}
-  Stage4: {fileID: 8300000, guid: 5c9612ac2c357bb478e199dfe4f87fee, type: 3}
-  Stage5: {fileID: 8300000, guid: 4522b9aee52efcd408249c04d3c200bd, type: 3}
 --- !u!82 &771058636
 AudioSource:
   m_ObjectHideFlags: 0

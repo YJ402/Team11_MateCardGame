@@ -11,7 +11,8 @@ using UnityEngine.UI;
 public class Card : MonoBehaviour
 {
     public SpriteRenderer backImage;
-    public SpriteRenderer backFrameImage; // BackFrame
+    public SpriteRenderer frontImage;
+    public SpriteRenderer frameImage; // BackFrame
     public int CardIndex { get; private set; }
     public int Stage { get; private set; }
     public bool IsMatched { get; private set; }
@@ -22,12 +23,13 @@ public class Card : MonoBehaviour
 
     public Shadow shadow { get; private set; }
 
-    public void Initialize(int cardIndex, int stageNum)
+    public void Initialize(int cardbackImage, int cardIndex, int stageNum)
     {
         Stage = stageNum;
         CardIndex = cardIndex;
-        backImage.sprite = Resources.Load<Sprite>($"Stage{Stage}/img{CardIndex}");
-        backFrameImage.sprite = Resources.Load<Sprite>("Frame"); ; // BackFrame
+        backImage.sprite = Resources.Load<Sprite>("CardBackImage/Back_" + cardbackImage);
+        frontImage.sprite = Resources.Load<Sprite>($"Stage{Stage}/img{CardIndex}");
+        frameImage.sprite = Resources.Load<Sprite>("Frame"); ; // BackFrame
 
         shadow = GetComponent<Shadow>();
     }
@@ -69,7 +71,7 @@ public class Card : MonoBehaviour
             shineLocation += 1.0f / duration * Time.deltaTime;
             shineLocation %= 1.0f;
 
-            backImage.material.SetFloat("_ShineLocation", shineLocation);
+            frontImage.material.SetFloat("_ShineLocation", shineLocation);
 
             yield return null;
         }

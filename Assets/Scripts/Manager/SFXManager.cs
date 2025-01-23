@@ -25,6 +25,9 @@ public class SFXManager : MonoBehaviour
     public void OnPlaySound(AudioClip clip)
     {
         AudioSource audio = poolManager.GetAvailableObject<AudioSource>();
+
+        audio.pitch = 1;
+
         audioSources.Add(audio);
 
         audio.clip = clip;
@@ -33,13 +36,13 @@ public class SFXManager : MonoBehaviour
         StartCoroutine(PlaySound(audio));
     }
 
-    public void OnPlaySound(AudioClip clip, float peach)
+    public void OnPlaySound(AudioClip clip, float pitch)
     {
         AudioSource audio = poolManager.GetAvailableObject<AudioSource>();
         audioSources.Add(audio);
         
         audio.clip = clip;
-        audio.pitch = peach;
+        audio.pitch = pitch;
         audio.Play();
 
         StartCoroutine(PlaySound(audio));
@@ -49,6 +52,7 @@ public class SFXManager : MonoBehaviour
     {
         yield return new WaitForSeconds(audio.clip.length);
 
+        audioSources.Remove(audio);
         poolManager.ReturnObject(audio);
     }
 }

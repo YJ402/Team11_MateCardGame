@@ -51,8 +51,6 @@ public class GameManager : MonoBehaviour
     {
         PoolManager = GetComponentInChildren<PoolManager>();
 
-        
-
         SoundManager = GetComponentInChildren<SoundManager>();
         SoundManager.Initialize(this);
     }

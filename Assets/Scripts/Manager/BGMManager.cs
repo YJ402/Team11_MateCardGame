@@ -1,42 +1,90 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.EditorTools;
 using UnityEngine;
 
 public class BGMManager : MonoBehaviour
 {
-    public AudioClip Stage1;
-    public AudioClip Stage2;
-    public AudioClip Stage3;
-    public AudioClip Stage4;
-    public AudioClip Stage5;
-    private AudioSource audiosource;
-    private GameManager GM;
+    private PoolManager poolManager;
 
+    private List<AudioSource> audioSources = new List<AudioSource>();
 
-    void Start()
+    public void Initialize(GameManager manager)
     {
-        GM = GameManager.Instance;
-        audiosource = GetComponent<AudioSource>();
-        stage_BGM();
+        poolManager = manager.PoolManager;
     }
-    private void stage_BGM ()
+
+    public void StopAllSounds()
     {
-        AudioClip clip = null;
-
-        switch(GM.stageNum)
+        for (int i = 0; i < audioSources.Count; i++)
         {
-            case 1: clip = Stage1; break;
-            case 2: clip = Stage2; break;
-            case 3: clip = Stage3; break;
-            case 4: clip = Stage4; break;
-            case 5: clip = Stage5; break;
+            audioSources[i].Stop();
+            poolManager.ReturnObject(audioSources[i]);
         }
-        if(clip != null)
-        {
-            audiosource.clip = clip;
-            audiosource.Play();
-        }
+    }
 
+    public AudioSource GetAudioSource()
+    {
+        AudioSource audio = poolManager.GetAvailableObject<AudioSource>();
+        audio.pitch = 1;
+        audio.volume = 1;
+        audio.loop = false;
+
+        return audio;
+    }
+
+    public void OnPlayLoop(AudioClip clip)
+    {
+        AudioSource audio = GetAudioSource();
+        audioSources.Add(audio);
+
+        audio.clip = clip;
+        audio.loop = true;
+        audio.Play();
+    }
+
+    public void OnPlaySound(AudioClip clip)
+    {
+        AudioSource audio = GetAudioSource();
+        audioSources.Add(audio);
+
+        audio.clip = clip;
+        audio.Play();
+
+        StartCoroutine(PlaySound(audio));
+    }
+
+    public void OnPlaySound(AudioClip clip, float volume)
+    {
+        AudioSource audio = GetAudioSource();
+        audioSources.Add(audio);
+
+        audio.clip = clip;
+        audio.volume = volume;
+        audio.Play();
+
+        StartCoroutine(PlaySound(audio));
+    }
+
+    public void OnPlaySound(AudioClip clip, float volume, float pitch)
+    {
+        AudioSource audio = GetAudioSource();
+        audioSources.Add(audio);
+
+        audio.clip = clip;
+        audio.volume = volume;
+        audio.pitch = pitch;
+        audio.Play();
+
+        StartCoroutine(PlaySound(audio));
+    }
+
+    IEnumerator PlaySound(AudioSource audio)
+    {
+        yield return new WaitForSeconds(audio.clip.length);
+
+        audioSources.Remove(audio);
+        poolManager.ReturnObject(audio);
     }
 }

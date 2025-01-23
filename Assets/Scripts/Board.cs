@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -14,6 +15,9 @@ public class Board : MonoBehaviour
     public int cardCount = 0;
     float time = 0.0f;
 
+    public AudioClip matchingClip;
+
+    public List<AudioClip> bgmClips = new List<AudioClip>();
 
     private GameManager gameManager;
     private CardControl cardControl;
@@ -23,6 +27,7 @@ public class Board : MonoBehaviour
         Time.timeScale = 1.0f;
 
         gameManager = GameManager.Instance;
+        gameManager.SoundManager.BGMManager.OnPlaySound(bgmClips[gameManager.stageNum - 1], 0.1f);
         cardControl = GetComponentInChildren<CardControl>();
 
         Initialize();
@@ -41,7 +46,7 @@ public class Board : MonoBehaviour
             float y = (i / boardSize) * margin - 1.7f;
 
             Card card = Instantiate(cardPrefab, new Vector3(x, 1.1f + y, 0), Quaternion.identity);
-            card.Initialize(arr[i], gameManager.stageNum); // 좌측 하단부터 차례대로 생성되는 카드에 배열에 저장된 숫자를 부여한다.
+            card.Initialize(Random.Range(0, 20), arr[i], gameManager.stageNum); // 좌측 하단부터 차례대로 생성되는 카드에 배열에 저장된 숫자를 부여한다.
         }
         cardCount = arr.Length;
     }
@@ -70,6 +75,8 @@ public class Board : MonoBehaviour
             cards[1].SetMatched(randomEffect);
 
             cardCount -= 2;
+
+            gameManager.SoundManager.SFXManager.OnPlaySound(matchingClip);
 
             if (cardCount == 0) // 게임 승리 시
             {

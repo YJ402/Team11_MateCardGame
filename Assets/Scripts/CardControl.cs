@@ -37,7 +37,6 @@ public class CardControl : MonoBehaviour
             {
                 if(hit.collider.TryGetComponent(out Card card))
                 {
-                    GameManager.Instance.SoundManager.SFXManager.OnPlaySound(card.shadow.clip);
                     card.GetComponent<Shadow>().Deactivation();
                     SelectCard(card);
                     card.Flip();
@@ -59,6 +58,7 @@ public class CardControl : MonoBehaviour
             collider.enabled = false; // 카드 더블 클릭 방지
         }
 
+        GameManager.Instance.SoundManager.SFXManager.OnPlaySound(card.shadow.clip);
         selectCards.Add(card);
 
         if (selectCards.Count == maxSelection)
