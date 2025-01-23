@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Unity.Collections.LowLevel.Unsafe;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +22,7 @@ public class Board : MonoBehaviour
 
     private GameManager gameManager;
     private CardControl cardControl;
+    private SoundManager sound;
 
     private void Start()
     {
@@ -28,7 +30,7 @@ public class Board : MonoBehaviour
 
         gameManager = GameManager.Instance;
         cardControl = GetComponentInChildren<CardControl>();
-
+        sound = GameManager.Instance.SoundManager;
         Initialize();
     }
 
@@ -55,7 +57,7 @@ public class Board : MonoBehaviour
         time += Time.deltaTime;
         timeTxt.text = time.ToString("N2");
 
-        if (time >= 130.0f) // 게임 패배 시
+        if (time >= 30.0f) // 게임 패배 시
         {
             gameManager.LoadScene("FailScene");
         }

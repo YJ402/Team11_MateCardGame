@@ -14,7 +14,6 @@ public class Success : MonoBehaviour
     public Sprite[] img;
     public string[] sprite;
     public TMP_Text tmp;
-    public int CardIndex { get; private set; }
     public int Stage { get; private set; }
     private string[] names = { "강영준", "김상현", "정순원", "정승제", "정성욱", "염기용" };
 
