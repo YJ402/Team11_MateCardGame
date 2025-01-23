@@ -328,7 +328,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stage1: {fileID: 8300000, guid: 7cfedd4cc9302c24ea940d97da35cb92, type: 3}
+  Stage2: {fileID: 8300000, guid: c86d2f3a74b4de44ebd1f76712bf98cc, type: 3}
   Stage3: {fileID: 8300000, guid: 7379fd0d32364dc49b5fc134d96ac85b, type: 3}
+  Stage4: {fileID: 8300000, guid: 5c9612ac2c357bb478e199dfe4f87fee, type: 3}
   Stage5: {fileID: 8300000, guid: 45d7617c2ebefd04ab08dcad0f4cfc55, type: 3}
 --- !u!82 &771058636
 AudioSource:
