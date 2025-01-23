@@ -10,9 +10,18 @@ public class PoolManager : MonoBehaviour
 
     public T GetAvailableObject<T>() where T : new()
     {
-        Pool pool = GetPool(typeof(T));
+        Type type = typeof(T);
 
-        return pool.GetAvailableObject<T>();
+        Pool pool = GetPool(type);
+
+        T _object = pool.GetAvailableObject<T>();
+
+        if (typeof(Component).IsAssignableFrom(type))
+        {
+            DontDestroyOnLoad(((Component)(object)_object).gameObject);
+        }
+
+        return _object;
     }
 
     private Pool GetPool(Type type)
