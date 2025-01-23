@@ -298,6 +298,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5861944}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 077cf32daa38450448e9291afe26136b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5861944}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -322,7 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toScene: MainScene
   stage: 4
-  delay: 0
+  delay: 1
 --- !u!95 &5861945
 Animator:
   serializedVersion: 5
@@ -368,6 +380,18 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 5861944}
+          m_TargetAssemblyTypeName: Button, Assembly-CSharp
+          m_MethodName: PlaySound
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: eeb551c727d21a242a019983b4ed3961, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -782,6 +806,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 288169881}
+          m_TargetAssemblyTypeName: Button, Assembly-CSharp
+          m_MethodName: PlaySound
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: eeb551c727d21a242a019983b4ed3961, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!95 &288169879
 Animator:
   serializedVersion: 5
@@ -849,6 +885,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 288169881}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 077cf32daa38450448e9291afe26136b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 288169881}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -873,7 +921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toScene: MainScene
   stage: -1
-  delay: 0
+  delay: 1
 --- !u!1 &345760626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,6 +1114,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 400519826}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 077cf32daa38450448e9291afe26136b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 400519826}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -1090,7 +1150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toScene: MainScene
   stage: 2
-  delay: 0
+  delay: 1
 --- !u!95 &400519827
 Animator:
   serializedVersion: 5
@@ -1136,6 +1196,18 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 400519826}
+          m_TargetAssemblyTypeName: Button, Assembly-CSharp
+          m_MethodName: PlaySound
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: eeb551c727d21a242a019983b4ed3961, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1584,6 +1656,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 829328508}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 077cf32daa38450448e9291afe26136b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 829328508}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -1608,7 +1692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toScene: MainScene
   stage: 1
-  delay: 0
+  delay: 1
 --- !u!95 &829328509
 Animator:
   serializedVersion: 5
@@ -1654,6 +1738,18 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 829328508}
+          m_TargetAssemblyTypeName: Button, Assembly-CSharp
+          m_MethodName: PlaySound
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: eeb551c727d21a242a019983b4ed3961, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2219,6 +2315,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1209965183}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 077cf32daa38450448e9291afe26136b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1209965183}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -2243,7 +2351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toScene: MainScene
   stage: 3
-  delay: 0
+  delay: 1
 --- !u!95 &1209965184
 Animator:
   serializedVersion: 5
@@ -2294,6 +2402,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1209965183}
+          m_TargetAssemblyTypeName: Button, Assembly-CSharp
+          m_MethodName: PlaySound
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: eeb551c727d21a242a019983b4ed3961, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1220926972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,6 +2427,7 @@ GameObject:
   - component: {fileID: 1220926977}
   - component: {fileID: 1220926975}
   - component: {fileID: 1220926974}
+  - component: {fileID: 1220926978}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2379,6 +2500,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1220926977}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 077cf32daa38450448e9291afe26136b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1220926977}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -2441,7 +2574,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toScene: TitleScene
   stage: 0
-  delay: 0
+  delay: 1
+--- !u!114 &1220926978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220926972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1220926977}
+          m_TargetAssemblyTypeName: Button, Assembly-CSharp
+          m_MethodName: PlaySound
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: eeb551c727d21a242a019983b4ed3961, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1289646630
 GameObject:
   m_ObjectHideFlags: 0
@@ -2529,6 +2691,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1289646633}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 077cf32daa38450448e9291afe26136b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1289646633}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -2553,7 +2727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toScene: MainScene
   stage: 6
-  delay: 0
+  delay: 1
 --- !u!95 &1289646634
 Animator:
   serializedVersion: 5
@@ -2599,6 +2773,18 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1289646633}
+          m_TargetAssemblyTypeName: Button, Assembly-CSharp
+          m_MethodName: PlaySound
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: eeb551c727d21a242a019983b4ed3961, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3375,6 +3561,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1916838240}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 077cf32daa38450448e9291afe26136b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1916838240}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -3399,7 +3597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toScene: MainScene
   stage: 5
-  delay: 0
+  delay: 1
 --- !u!95 &1916838241
 Animator:
   serializedVersion: 5
@@ -3445,6 +3643,18 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1916838240}
+          m_TargetAssemblyTypeName: Button, Assembly-CSharp
+          m_MethodName: PlaySound
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: eeb551c727d21a242a019983b4ed3961, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 

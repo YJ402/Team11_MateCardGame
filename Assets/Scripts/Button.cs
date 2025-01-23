@@ -19,12 +19,6 @@ public class Button : MonoBehaviour
         Instance = GameManager.Instance;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     IEnumerator Delay()
     {
         yield return new WaitForSeconds(delay);
