@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+    public SFXManager SFXManager { get; private set; }
+    //public BGMManager BGMManager { get; private set; }
+
     private AudioSource audioSource;
 
-    private void Awake()
+    public void Initialize(GameManager manager)
     {
-        audioSource = GetComponent<AudioSource>();
+        SFXManager = GetComponentInChildren<SFXManager>();
+        SFXManager.Initialize(manager);
     }
 
     public void PlaySound(AudioClip clip)
@@ -16,8 +20,8 @@ public class SoundManager : MonoBehaviour
         audioSource.PlayOneShot(clip);
     }
 
-    public void StopAllSound()
+    public void OnStopAllSounds()
     {
-        audioSource.Stop();
+        SFXManager.StopAllSounds();
     }
 }

@@ -42,18 +42,24 @@ public class GameManager : MonoBehaviour
         Initialize();
     }
 
+    public PoolManager PoolManager { get; private set; }
     public SoundManager SoundManager { get; private set; }
 
     public int stageNum = 0;
 
     public void Initialize()
     {
+        PoolManager = GetComponentInChildren<PoolManager>();
+
+        
+
         SoundManager = GetComponentInChildren<SoundManager>();
+        SoundManager.Initialize(this);
     }
 
     public void LoadScene(string name)
     {
-        SoundManager.StopAllSound();
+        SoundManager.OnStopAllSounds();
         SceneManager.LoadScene(name);
     }
 }

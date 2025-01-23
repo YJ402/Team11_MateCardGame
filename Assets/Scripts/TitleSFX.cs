@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class TitleSFX : MonoBehaviour
 {
-    public AudioClip fallingSFX;
-    public AudioClip MoveCloudSFX;
-    public AudioClip MoveDownSFX;
-    public AudioClip MoveUpSFX;
-
     private SoundManager soundManager;
 
     public void Start()
@@ -16,23 +11,8 @@ public class TitleSFX : MonoBehaviour
         soundManager = GameManager.Instance.SoundManager;
     }
 
-    public void OnPlayFallingSFX()
+    public void OnPlaySFX(AudioClip clip)
     {
-        soundManager.PlaySound(fallingSFX);
-    }
-
-    public void OnPlayMoveCloudSFX()
-    {
-        soundManager.PlaySound(MoveCloudSFX);
-    }
-
-    public void OnPlayMoveDownSFX()
-    {
-        soundManager.PlaySound(MoveDownSFX);
-    }
-
-    public void OnPlayMoveUpSFX()
-    {
-        soundManager.PlaySound(MoveUpSFX);
+        soundManager.SFXManager.OnPlaySound(clip);
     }
 }

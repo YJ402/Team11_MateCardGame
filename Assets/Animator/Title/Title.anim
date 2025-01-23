@@ -848,30 +848,30 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.083333336
-    functionName: OnPlayMoveCloudSFX
+    functionName: OnPlaySFX
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 8300000, guid: c0035afcffecf6148aef4a14c0daf071, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.8333333
-    functionName: OnPlayFallingSFX
+    functionName: OnPlaySFX
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 8300000, guid: 2e82747f8652a164cada0c3e19841028, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 3.4166667
-    functionName: OnPlayMoveDownSFX
+  - time: 3.5
+    functionName: OnPlaySFX
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 8300000, guid: f0638461143d3ed469331f869591d09f, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 4.5
-    functionName: OnPlayMoveUpSFX
+    functionName: OnPlaySFX
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 8300000, guid: 8cff6cb1499c3c844b2a6e91152b8dbe, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

@@ -49,6 +49,6 @@ public class Button : MonoBehaviour
 
     public void PlaySound(AudioClip clip)
     {
-        GameManager.Instance.SoundManager.PlaySound(clip);
+        GameManager.Instance.SoundManager.SFXManager.OnPlaySound(clip);
     }
 }

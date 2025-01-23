@@ -1272,7 +1272,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -3307,10 +3307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4addda12ca8d54340bee2ad2f1f4312a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallingSFX: {fileID: 8300000, guid: 2e82747f8652a164cada0c3e19841028, type: 3}
-  MoveCloudSFX: {fileID: 8300000, guid: c0035afcffecf6148aef4a14c0daf071, type: 3}
-  MoveDownSFX: {fileID: 8300000, guid: f0638461143d3ed469331f869591d09f, type: 3}
-  MoveUpSFX: {fileID: 8300000, guid: 8cff6cb1499c3c844b2a6e91152b8dbe, type: 3}
 --- !u!1 &1837985490
 GameObject:
   m_ObjectHideFlags: 0
