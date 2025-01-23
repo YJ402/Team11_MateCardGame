@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardControl : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class CardControl : MonoBehaviour
             {
                 if(hit.collider.TryGetComponent(out Card card))
                 {
+                    GameManager.Instance.SoundManager.SFXManager.OnPlaySound(card.shadow.clip);
                     card.GetComponent<Shadow>().Deactivation();
                     SelectCard(card);
                     card.Flip();

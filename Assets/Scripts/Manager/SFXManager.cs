@@ -33,6 +33,18 @@ public class SFXManager : MonoBehaviour
         StartCoroutine(PlaySound(audio));
     }
 
+    public void OnPlaySound(AudioClip clip, float peach)
+    {
+        AudioSource audio = poolManager.GetAvailableObject<AudioSource>();
+        audioSources.Add(audio);
+        
+        audio.clip = clip;
+        audio.pitch = peach;
+        audio.Play();
+
+        StartCoroutine(PlaySound(audio));
+    }
+
     IEnumerator PlaySound(AudioSource audio)
     {
         yield return new WaitForSeconds(audio.clip.length);

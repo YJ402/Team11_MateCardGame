@@ -14,6 +14,8 @@ public class Shadow : MonoBehaviour
     private SpriteRenderer shadowRenderer;
     private bool bActivate = true;
 
+    public AudioClip clip;
+
     public void Deactivation()
     {
         // 그림자 비활성화
@@ -54,6 +56,8 @@ public class Shadow : MonoBehaviour
 
         // 마우스가 객체 위에 올려지면 객체를 살짝 이동시킴
         transform.position = (Vector2)transform.position + mouseOffset;
+
+        GameManager.Instance.SoundManager.SFXManager.OnPlaySound(clip, 2);
 
     }
     private void OnMouseExit()

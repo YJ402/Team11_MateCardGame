@@ -20,7 +20,7 @@ public class Card : MonoBehaviour
 
     public bool bDestroyStart { get; set; } = false;
 
-    private Shadow shadow;
+    public Shadow shadow { get; private set; }
 
     public void Initialize(int cardIndex, int stageNum)
     {

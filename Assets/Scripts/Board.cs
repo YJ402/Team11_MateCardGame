@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
-using Unity.Collections.LowLevel.Unsafe;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Board : MonoBehaviour
 {
@@ -13,7 +9,7 @@ public class Board : MonoBehaviour
     public Card cardPrefab;
 
     public float margin = 1.1f;
-    public Text timeTxt;
+    public TextMeshProUGUI timeTxt;
 
     public int cardCount = 0;
     float time = 0.0f;
@@ -44,7 +40,7 @@ public class Board : MonoBehaviour
             float x = (i % boardSize) * margin - 1.6f;
             float y = (i / boardSize) * margin - 1.7f;
 
-            Card card = Instantiate(cardPrefab, new Vector3(x, y, 0), Quaternion.identity);
+            Card card = Instantiate(cardPrefab, new Vector3(x, 1.1f + y, 0), Quaternion.identity);
             card.Initialize(arr[i], gameManager.stageNum); // 좌측 하단부터 차례대로 생성되는 카드에 배열에 저장된 숫자를 부여한다.
         }
         cardCount = arr.Length;
@@ -53,7 +49,7 @@ public class Board : MonoBehaviour
     private void Update()
     {
         time += Time.deltaTime;
-        timeTxt.text = time.ToString("N2");
+        timeTxt.text = time.ToString("00.00").Replace('.', ' ');
 
         if (time >= 130.0f) // 게임 패배 시
         {
