@@ -80,16 +80,31 @@ public class Card : MonoBehaviour
 
     public void WaitForSecondToFlip(float time)
     {
-        Invoke("Flip", time);
+        StartCoroutine(Flip(time));
     }
 
     public void Flip()
     {
         if (!IsMatched)
         {
+            shadow.Deactivation();
+
             transform.Rotate(0, 180, 0);
         }
     }
+
+    private IEnumerator Flip(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        if (!IsMatched)
+        {
+            shadow.Activation();
+
+            transform.Rotate(0, 180, 0);
+        }
+    }
+
     private IEnumerator Effect1()
     {
         // 카드를 1.0초 동안 Y축으로 180도 회전

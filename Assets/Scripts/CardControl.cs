@@ -80,13 +80,19 @@ public class CardControl : MonoBehaviour
             }
 
             if (!selectCards[0].IsMatched)
-                selectCards[0].GetComponent<Shadow>().Activation();
+                StartCoroutine(ShadowActivation(selectCards[0]));
             if (!selectCards[1].IsMatched)
-                selectCards[1].GetComponent<Shadow>().Activation();
+                StartCoroutine(ShadowActivation(selectCards[1]));
 
             // 선택 카드 초기화
             selectCards.Clear();
         }
+    }
+
+    private IEnumerator ShadowActivation(Card card)
+    {
+        yield return new WaitForSeconds(1f);
+        card.shadow.Activation();
     }
 
     private IEnumerator EnableSelectionAfterDelay(float delay)

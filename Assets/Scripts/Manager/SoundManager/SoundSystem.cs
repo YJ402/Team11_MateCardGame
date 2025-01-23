@@ -1,21 +1,19 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.EditorTools;
 using UnityEngine;
 
-public class BGMManager : MonoBehaviour
+public abstract class SoundSystem : MonoBehaviour
 {
-    private PoolManager poolManager;
+    protected PoolManager poolManager;
 
-    private List<AudioSource> audioSources = new List<AudioSource>();
+    protected List<AudioSource> audioSources = new List<AudioSource>();
 
-    public void Initialize(GameManager manager)
+    public virtual void Initialize(GameManager manager)
     {
         poolManager = manager.PoolManager;
     }
 
-    public void StopAllSounds()
+    public virtual void StopAllSounds()
     {
         for (int i = 0; i < audioSources.Count; i++)
         {
@@ -24,24 +22,13 @@ public class BGMManager : MonoBehaviour
         }
     }
 
-    public AudioSource GetAudioSource()
+    public virtual AudioSource GetAudioSource()
     {
         AudioSource audio = poolManager.GetAvailableObject<AudioSource>();
         audio.pitch = 1;
         audio.volume = 1;
-        audio.loop = false;
 
         return audio;
-    }
-
-    public void OnPlayLoop(AudioClip clip)
-    {
-        AudioSource audio = GetAudioSource();
-        audioSources.Add(audio);
-
-        audio.clip = clip;
-        audio.loop = true;
-        audio.Play();
     }
 
     public void OnPlaySound(AudioClip clip)
@@ -52,7 +39,7 @@ public class BGMManager : MonoBehaviour
         audio.clip = clip;
         audio.Play();
 
-        StartCoroutine(PlaySound(audio));
+        StartCoroutine(ReturnAudio(audio));
     }
 
     public void OnPlaySound(AudioClip clip, float volume)
@@ -64,7 +51,7 @@ public class BGMManager : MonoBehaviour
         audio.volume = volume;
         audio.Play();
 
-        StartCoroutine(PlaySound(audio));
+        StartCoroutine(ReturnAudio(audio));
     }
 
     public void OnPlaySound(AudioClip clip, float volume, float pitch)
@@ -77,10 +64,10 @@ public class BGMManager : MonoBehaviour
         audio.pitch = pitch;
         audio.Play();
 
-        StartCoroutine(PlaySound(audio));
+        StartCoroutine(ReturnAudio(audio));
     }
 
-    IEnumerator PlaySound(AudioSource audio)
+    IEnumerator ReturnAudio(AudioSource audio)
     {
         yield return new WaitForSeconds(audio.clip.length);
 
