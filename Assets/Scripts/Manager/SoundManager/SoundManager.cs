@@ -5,7 +5,7 @@ public class SoundManager : MonoBehaviour
     public SFXSystem SFXManager { get; private set; }
     public BGMSystem BGMManager { get; private set; }
 
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     public void Initialize(GameManager manager)
     {
