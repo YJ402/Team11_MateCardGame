@@ -57,7 +57,7 @@ public class Shadow : MonoBehaviour
         // 마우스가 객체 위에 올려지면 객체를 살짝 이동시킴
         transform.position = (Vector2)transform.position + mouseOffset;
 
-        GameManager.Instance.SoundManager.SFXManager.OnPlaySound(clip, 2);
+        GameManager.Instance.SoundManager.SFXManager.OnPlaySound(clip, 1, 2);
 
     }
     private void OnMouseExit()
