@@ -673,7 +673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toScene: SelectScene
   stage: 0
-  delay: 0
+  delay: 1
 --- !u!114 &493747802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1757,7 +1757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toScene: MainScene
   stage: 0
-  delay: 0
+  delay: 1
 --- !u!114 &1021250767
 MonoBehaviour:
   m_ObjectHideFlags: 0
