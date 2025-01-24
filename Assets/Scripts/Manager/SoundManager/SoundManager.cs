@@ -19,5 +19,6 @@ public class SoundManager : MonoBehaviour
     public void OnStopAllSounds()
     {
         SFXManager.StopAllSounds();
+        BGMManager.StopAllSounds();
     }
 }

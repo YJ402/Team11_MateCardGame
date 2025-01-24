@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(string name)
     {
+        SoundManager.OnStopAllSounds();
         SceneManager.LoadScene(name);
     }
 }
