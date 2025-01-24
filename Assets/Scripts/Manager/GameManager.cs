@@ -54,8 +54,12 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(string name)
     {
-        if(name != "TitleScene" && name != "SelectScene") SoundManager.audioSource.Stop();
-        else if(!SoundManager.audioSource.isPlaying) SoundManager.audioSource.Play();
+        if (name != "TitleScene" && name != "SelectScene") SoundManager.audioSource.Stop();
+        else if (!SoundManager.audioSource.isPlaying)
+        {
+            SoundManager.audioSource.time = 9;
+            SoundManager.audioSource.Play();
+        }
         SoundManager.OnStopAllSounds();
         SceneManager.LoadScene(name);
     }
