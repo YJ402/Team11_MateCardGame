@@ -56,7 +56,7 @@ public class Board : MonoBehaviour
         time += Time.deltaTime;
         timeTxt.text = time.ToString("00.00").Replace('.', ' ');
 
-        if (time >= 130.0f) // 게임 패배 시
+        if (time >= 30.0f) // 게임 패배 시
         {
             gameManager.LoadScene("FailScene");
         }
